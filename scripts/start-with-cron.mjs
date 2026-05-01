@@ -45,12 +45,12 @@ if (!AUTO_GEN) {
 
     cron.schedule('0 7,10,13,16,19 * * *', async () => {
       console.log(`[cron] publisher (phase-1) ${new Date().toISOString()}`);
-      try { await pub.publishOnePhase(1); } catch (e) { console.error('[cron] phase-1 failed:', e); }
+      try { await pub.runPublisher('phase1'); } catch (e) { console.error('[cron] phase-1 failed:', e); }
     }, { timezone: 'UTC' });
 
     cron.schedule('0 8 * * 1-5', async () => {
       console.log(`[cron] publisher (phase-2) ${new Date().toISOString()}`);
-      try { await pub.publishOnePhase(2); } catch (e) { console.error('[cron] phase-2 failed:', e); }
+      try { await pub.runPublisher('phase2'); } catch (e) { console.error('[cron] phase-2 failed:', e); }
     }, { timezone: 'UTC' });
 
     cron.schedule('0 8 * * 6', async () => {
