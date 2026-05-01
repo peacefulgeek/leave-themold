@@ -111,3 +111,25 @@ temp/
 
 # Manus version file (auto-generated, not part of source)
 client/public/__manus__/version.json
+
+# ─── ZERO IMAGES IN REPO (master scope §9B) ───
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.tif
+*.webp
+*.avif
+*.heic
+*.heif
+*.ico
+*.svg
+
+# Single allowed exception
+!client/public/favicon.svg
+
+# Manus sandbox artifacts
+.manus-logs/
+.manus/

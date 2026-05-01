@@ -33,6 +33,9 @@ export const appRouter = router({
     stats: publicProcedure.query(async () => ({
       published: await totalCount(),
     })),
+    products: publicProcedure.query(() =>
+      PRODUCTS.map((p) => ({ ...p, url: affiliateUrl(p.asin) })),
+    ),
   }),
 
   articles: router({

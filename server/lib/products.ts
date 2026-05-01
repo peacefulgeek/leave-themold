@@ -12,7 +12,8 @@ export interface Product {
     | "books"
     | "supplements"
     | "humidity-monitors"
-    | "hepa-vacuums";
+    | "hepa-vacuums"
+    | "herbs-tcm";
   blurb: string;
 }
 
@@ -85,6 +86,20 @@ export const PRODUCTS: Product[] = [
   { asin: "B0837VYW6S", title: "AcuRite 01512 Pro Color Weather Station", category: "humidity-monitors", blurb: "In/outdoor humidity logging with alerts." },
   { asin: "B0CHFC1BBF", title: "SensorPush HT.w Wireless Hygrometer", category: "humidity-monitors", blurb: "Discreet logger with cloud history." },
   { asin: "B0CW1MPHCN", title: "Govee H5179 Wi-Fi Hygrometer", category: "humidity-monitors", blurb: "Wi-Fi logging with phone alerts." },
+
+  // Herbs & traditional botanicals (often used alongside Western CIRS protocols)
+  { asin: "B0014AURVW", title: "Pure Encapsulations N-Acetyl Cysteine 600mg", category: "supplements", blurb: "Glutathione precursor; supports liver detox." },
+  { asin: "B07R7Y3SHX", title: "Designs for Health GI-Revive Powder", category: "supplements", blurb: "Gut-lining repair blend during recovery." },
+  { asin: "B07GVK1XQF", title: "Allimax 450 Stabilised Allicin Capsules", category: "herbs-tcm", blurb: "Allicin from garlic; biofilm-active botanical." },
+  { asin: "B0028PUMBE", title: "Researched Nutritionals CytoQuel", category: "herbs-tcm", blurb: "Cytokine-modulating herbal blend." },
+  { asin: "B07VQ8FT7J", title: "Cymbiotika Liposomal Vitamin C with PQQ", category: "supplements", blurb: "Liposomal C with mitochondrial support." },
+  { asin: "B07J1F69YJ", title: "Buhner Japanese Knotweed Tincture", category: "herbs-tcm", blurb: "Resveratrol-rich anti-spirochetal botanical (Buhner protocol)." },
+  { asin: "B07JLR97TY", title: "Cordyceps Mushroom Capsules (Real Mushrooms)", category: "herbs-tcm", blurb: "Adaptogen used in mitochondrial recovery." },
+  { asin: "B07T5BZK1F", title: "Reishi Mushroom Capsules (Real Mushrooms)", category: "herbs-tcm", blurb: "Calming adaptogen often used in CIRS recovery." },
+  { asin: "B0719GZP2N", title: "Astragalus Root Capsules (Nature's Way)", category: "herbs-tcm", blurb: "Classical TCM immune-tonic herb." },
+  { asin: "B003SI5MSE", title: "Holy Basil Tulsi (Organic India)", category: "herbs-tcm", blurb: "Adaptogenic tulsi for stress + cortisol load." },
+  { asin: "B0009F3PJ2", title: "Pau d'Arco Tea (Buddha Teas)", category: "herbs-tcm", blurb: "Traditional anti-microbial bark tea." },
+  { asin: "B0042WDXGY", title: "Olive Leaf Extract (Nature's Way)", category: "herbs-tcm", blurb: "Oleuropein; antimicrobial used in mold recovery." },
 ];
 
 export function pickProductsForArticle(slug: string, count = 4): Product[] {

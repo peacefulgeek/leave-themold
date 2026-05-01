@@ -52,8 +52,7 @@ describe("composeArticle (deterministic primary path)", () => {
     // (TL;DR + byline are injected by articleSsr at the page level, not the body)
     expect(a.body).toMatch(/<aside class="mantra"/);
     expect(a.body).toMatch(/paid link/);
-    const internalCount = (a.body.match(/href="[^"]*themoldtruth\.com\/articles\/[^"]+"/g) || []).length
-      + (a.body.match(/href="\/articles\/[^"]+"/g) || []).length;
+    const internalCount = (a.body.match(/href="[^"]*\/articles\/[a-z0-9-]+/g) || []).length;
     expect(internalCount).toBeGreaterThanOrEqual(3);
     // External authority (non-Amazon, non-self) link
     const survivingMold = a.body.includes("survivingmold.com");

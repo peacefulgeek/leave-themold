@@ -22,9 +22,9 @@ export interface Topic {
 export const PHASE_1_TOPICS: Topic[] = [
   { slug: "what-is-cirs", title: "What Is CIRS? A Plain-English Map of Chronic Inflammatory Response Syndrome", category: "diagnosis", tags: ["cirs", "biotoxin", "introduction"], angle: "Define CIRS clearly without jargon, frame the patient experience, and explain why mainstream medicine often misses it." },
   { slug: "early-signs-of-mold-illness", title: "Early Signs of Mold Illness Most Doctors Miss", category: "diagnosis", tags: ["symptoms", "diagnosis", "mold"], angle: "Walk through the cluster of vague symptoms that almost always show up first." },
-  { slug: "shoemaker-protocol-overview", title: "The Shoemaker Protocol, Step by Step (And What Patients Actually Experience)", category: "treatment", tags: ["shoemaker", "protocol", "treatment"], angle: "Explain each of the eleven steps, what binders are used, and how patients feel along the way." },
+  { slug: "shoemaker-protocol-overview", title: "The Shoemaker Protocol, Step by Step (And What Patients Experience)", category: "treatment", tags: ["shoemaker", "protocol", "treatment"], angle: "Explain each of the eleven steps, what binders are used, and how patients feel along the way." },
   { slug: "vcs-test-explained", title: "The VCS Test, Explained: A 5-Minute Screen That Saves Years", category: "testing", tags: ["vcs", "screening", "testing"], angle: "Walk through what the Visual Contrast Sensitivity test catches, why it matters, where to take it." },
-  { slug: "mycotoxin-urine-test-guide", title: "Mycotoxin Urine Testing: How to Read the Lab Like a Pro", category: "testing", tags: ["mycotoxin", "labs", "testing"], angle: "Decode the major lab panels, common false positives, and what the numbers really mean." },
+  { slug: "mycotoxin-urine-test-guide", title: "Mycotoxin Urine Testing: How to Read the Lab Like a Pro", category: "testing", tags: ["mycotoxin", "labs", "testing"], angle: "Decode the major lab panels, common false positives, and what the numbers signal." },
   { slug: "ermi-vs-hertsmi-2", title: "ERMI vs HERSMI-2: Which Mold-In-Home Test Should You Trust?", category: "testing", tags: ["ermi", "home-testing", "remediation"], angle: "Compare the two tests, when to use each, and how to interpret the score." },
   { slug: "binders-cholestyramine-welchol", title: "Binders 101: Cholestyramine, Welchol, and the Natural Alternatives", category: "treatment", tags: ["binders", "cholestyramine", "welchol"], angle: "Explain how prescription and natural binders work, side effects, and how to time them." },
   { slug: "remediating-a-water-damaged-home", title: "Remediating a Water-Damaged Home Without Getting Scammed", category: "remediation", tags: ["remediation", "contractor", "home"], angle: "Practical contractor-vetting checklist + the questions that separate honest remediators from cleaners." },
@@ -63,7 +63,8 @@ export const PHASE_2_TOPICS: Topic[] = [
   { slug: "ozone-vs-hocl", title: "Ozone vs Hypochlorous Acid for Mold Decontamination", category: "remediation", tags: ["ozone", "hocl"], angle: "Compare the two heavy-hitters honestly." },
 ];
 
-export const ALL_TOPICS = [...PHASE_1_TOPICS, ...PHASE_2_TOPICS];
+import { PHASE_3_TOPICS } from "./topicCatalogPhase3";
+export const ALL_TOPICS: Topic[] = [...PHASE_1_TOPICS, ...PHASE_2_TOPICS, ...PHASE_3_TOPICS];
 
 export function topicBySlug(slug: string): Topic | undefined {
   return ALL_TOPICS.find((t) => t.slug === slug);

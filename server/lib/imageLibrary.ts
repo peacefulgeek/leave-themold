@@ -1,30 +1,46 @@
-// Curated, light, hopeful editorial photo library.
-// All assets are served from the platform CDN (NOT from the repo) — they are
-// generated once and the URLs persist with the project lifecycle.
+// Hero library — every URL points at the leavethemold.com Bunny pull-zone.
+// Per master scope §9, images live ONLY on Bunny. The 15 source webps live at
+// /library/lib-01.webp ... /library/lib-15.webp on the storage zone, and the
+// per-article copy is written to /images/{slug}.webp by the cron.
 
-export const IMAGE_LIBRARY: string[] = [
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-01-3tkSQZCbtg8qCEjSaESFAu.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-02-Vy4m7ggucfp6TpUytL9BbC.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-03-hpcuY87DAQQJbFTRpc62s7.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-04-V8Rt99cPEwZRDYuZkZNzoV.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-05-6WheK3qcwNLRJyd9S3YJTQ.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-06-jBiLkwXJpEp4GB3GkWjwZR.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-07-A3Vs2jvbg3ZWCYX94H3HHD.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-08-Hgnq2RKxAsjA75NBSoL8m7.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-09-BZViypxsLqFQRrbVhJU2Um.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-10-54JHGtexddSSM4UFQzJuGj.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-11-97UW4tgaXFg8ofY5QRiLfa.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-12-ZqwndpsaP2iT7zS9XUAEzd.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-13-agX7mKx34N8Nteu6yfTHa9.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-14-85DcNAAynQWaa5biQTVVyD.webp",
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-15-DPBQfV92UZGPHPEefY8qqu.webp",
-];
+import { SITE, bunnyLibrary } from "./siteConfig";
 
-export const AUTHOR_PHOTO =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/author-nGinXQxZr5cfQDMguMSLzi.webp";
+const LIB_COUNT = 15;
 
-export const LOGO_MARK =
-  "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/logo-mark-VJLPm36MAUUVnR7nWY7Ljf.webp";
+// Dev mirror — used when Bunny apiKey is the placeholder.  Production swap is
+// `pnpm bunny:remap` once SITE.bunny is real.
+const DEV_MIRROR: Record<string, string> = {
+  "lib-01": "/manus-storage/lib-01_0b84991b.webp",
+  "lib-02": "/manus-storage/lib-02_8e6511b8.webp",
+  "lib-03": "/manus-storage/lib-03_309d5e26.webp",
+  "lib-04": "/manus-storage/lib-04_efea7124.webp",
+  "lib-05": "/manus-storage/lib-05_370acb00.webp",
+  "lib-06": "/manus-storage/lib-06_29d40374.webp",
+  "lib-07": "/manus-storage/lib-07_9abe7060.webp",
+  "lib-08": "/manus-storage/lib-08_c4dd7c67.webp",
+  "lib-09": "/manus-storage/lib-09_b96a89b8.webp",
+  "lib-10": "/manus-storage/lib-10_a7f177bf.webp",
+  "lib-11": "/manus-storage/lib-11_e960d244.webp",
+  "lib-12": "/manus-storage/lib-12_c1db0412.webp",
+  "lib-13": "/manus-storage/lib-13_fb881ac0.webp",
+  "lib-14": "/manus-storage/lib-14_0c574279.webp",
+  "lib-15": "/manus-storage/lib-15_82d3a4ba.webp",
+  author: "/manus-storage/author_aecaa0eb.webp",
+  "logo-mark": "/manus-storage/logo-mark_f7a86827.webp",
+};
+function useMirror(): boolean {
+  return !SITE.bunny.apiKey || SITE.bunny.apiKey.startsWith("REPLACE");
+}
+function libUrl(idx: number): string {
+  const key = `lib-${String(idx).padStart(2, "0")}`;
+  if (useMirror() && DEV_MIRROR[key]) return DEV_MIRROR[key];
+  return bunnyLibrary(idx);
+}
+
+export const IMAGE_LIBRARY: string[] = Array.from({ length: LIB_COUNT }, (_, i) => libUrl(i + 1));
+
+export const AUTHOR_PHOTO = useMirror() ? DEV_MIRROR.author! : `${SITE.bunny.pullZone}/library/author.webp`;
+export const LOGO_MARK = useMirror() ? DEV_MIRROR["logo-mark"]! : `${SITE.bunny.pullZone}/library/logo-mark.webp`;
 
 /** Deterministic hero pick by slug — keeps the same article showing the same hero. */
 export function pickHeroForSlug(slug: string, salt = 0): string {
@@ -44,4 +60,35 @@ export function pickInlineForSlug(slug: string): string {
     alt = pickHeroForSlug(slug, salt);
   }
   return alt;
+}
+
+/** Copy a chosen library image to /images/{slug}.webp on Bunny.
+ *  Falls back to the library URL itself if Bunny credentials aren't set or the upload fails.
+ */
+export async function assignHeroImage(slug: string): Promise<string> {
+  const library = pickHeroForSlug(slug);
+  const dest = `${SITE.bunny.pullZone}/images/${slug}.webp`;
+  if (!SITE.bunny.apiKey || SITE.bunny.apiKey.startsWith("REPLACE")) {
+    // Bunny credentials not yet provisioned — return the library URL directly.
+    return library;
+  }
+  try {
+    const dl = await fetch(library);
+    if (!dl.ok) throw new Error(`download ${dl.status}`);
+    const buf = await dl.arrayBuffer();
+    const host = SITE.bunny.storageHost.replace(/^https?:\/\//, "");
+    const upUrl = `https://${host}/${SITE.bunny.storageZone}/images/${slug}.webp`;
+    const up = await fetch(upUrl, {
+      method: "PUT",
+      headers: {
+        AccessKey: SITE.bunny.apiKey,
+        "Content-Type": "image/webp",
+      },
+      body: buf,
+    });
+    if (!up.ok) throw new Error(`upload ${up.status}`);
+    return dest;
+  } catch {
+    return library;
+  }
 }

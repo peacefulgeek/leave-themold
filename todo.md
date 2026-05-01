@@ -69,3 +69,26 @@
 - [x] All 9 vitest tests pass
 - [x] All public routes return 200
 - [x] Sitemap contains all 30+ articles + 6 static pages
+
+
+## Migration to leavethemold.com (peacefulgeek/leave-themold)
+
+- [ ] Re-read master scope §1–23 + github-push-workflow skill + conscious-elder-bunny skill
+- [ ] Diff current build vs master scope §3 file structure / §4 package.json / §5 .gitignore / §6 .do/app.yaml
+- [ ] Drop Manus runtime: vite-plugin-manus-runtime, @builder.io/vite-plugin-jsx-loc, manus-storage proxy, OAuth flow
+- [ ] Replace Manus DB env (DATABASE_URL points to TiDB) with portable PG/MySQL connection string handling that works on DO App Platform
+- [ ] Replace Manus CDN URLs with https://cdn.leavethemold.com/library/lib-NN.webp
+- [ ] Update siteConfig: apex=leavethemold.com, repo=peacefulgeek/leave-themold
+- [ ] Add /assessments page with 11 self-check assessments
+- [ ] Add /supplements page with ~50 verified ASINs (TCM/herbs/supplements) using tag spankyspinola-20
+- [ ] Upload all 15 hero webps to Bunny storage zone for leavethemold.com
+- [ ] Rewrite all heroUrls in articles table to Bunny URLs
+- [ ] Delete local /home/ubuntu/webdev-static-assets/mold-truth/* (no local storage after Bunny migration)
+- [ ] Expand topic catalog to 500 entries
+- [ ] Bulk-seed all 500 articles with status='queued', 1800+ words, gate-passing, voice-correct, Bunny heroes
+- [ ] Verify only ~36 articles published, remaining ~464 stay queued
+- [ ] Confirm crons are in-code (node-cron) only, NOT Manus scheduled
+- [ ] Add .do/app.yaml per master scope §6
+- [ ] Run §22 post-build audit; capture every check status
+- [ ] Push to peacefulgeek/leave-themold via SSH, capture commit SHA
+- [ ] Emit §23 report block

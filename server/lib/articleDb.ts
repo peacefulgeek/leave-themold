@@ -74,6 +74,13 @@ export async function upsertArticle(row: InsertArticle): Promise<void> {
   }
 }
 
+export async function listArticleSlugs(): Promise<string[]> {
+  const db = await getDb();
+  if (!db) return [];
+  const rows = await db.select({ s: articles.slug }).from(articles);
+  return rows.map(r => String(r.s));
+}
+
 export async function totalCount(): Promise<number> {
   const db = await getDb();
   if (!db) return 0;

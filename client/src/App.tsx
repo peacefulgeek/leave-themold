@@ -11,6 +11,8 @@ import About from "./pages/About";
 import Recommended from "./pages/Recommended";
 import Privacy from "./pages/Privacy";
 import Contact from "./pages/Contact";
+import Assessments from "./pages/Assessments";
+import Supplements from "./pages/Supplements";
 
 function Router() {
   return (
@@ -19,6 +21,8 @@ function Router() {
       <Route path="/articles" component={Articles} />
       <Route path="/articles/category/:category" component={Articles} />
       <Route path="/articles/:slug" component={Article} />
+      <Route path="/assessments" component={Assessments} />
+      <Route path="/supplements" component={Supplements} />
       <Route path="/recommended" component={Recommended} />
       <Route path="/about" component={About} />
       <Route path="/privacy" component={Privacy} />

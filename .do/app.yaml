@@ -1,0 +1,60 @@
+name: leave-the-mold
+region: nyc
+services:
+  - name: web
+    github:
+      repo: peacefulgeek/leave-themold
+      branch: main
+      deploy_on_push: true
+    build_command: pnpm install --frozen-lockfile && pnpm build && pnpm check:no-images
+    run_command: node scripts/start-with-cron.mjs
+    instance_count: 1
+    instance_size_slug: basic-xxs
+    http_port: 3000
+    health_check:
+      http_path: /health
+      initial_delay_seconds: 30
+      period_seconds: 60
+      timeout_seconds: 10
+      success_threshold: 1
+      failure_threshold: 3
+    envs:
+      - key: NODE_ENV
+        value: production
+        scope: RUN_TIME
+      - key: PORT
+        value: "3000"
+        scope: RUN_TIME
+      - key: AUTO_GEN_ENABLED
+        value: "true"
+        scope: RUN_TIME
+      - key: AMAZON_TAG
+        value: spankyspinola-20
+        scope: RUN_TIME
+
+      # Writing engine — DeepSeek via OpenAI client
+      - key: OPENAI_API_KEY
+        scope: RUN_TIME
+        type: SECRET
+      - key: OPENAI_BASE_URL
+        value: https://api.deepseek.com
+        scope: RUN_TIME
+      - key: OPENAI_MODEL
+        value: deepseek-v4-pro
+        scope: RUN_TIME
+
+      # Database (DigitalOcean Managed Postgres or compatible)
+      - key: DATABASE_URL
+        scope: RUN_TIME
+        type: SECRET
+
+      # GitHub PAT for ASIN audit reports + image migration
+      - key: GH_PAT
+        scope: RUN_TIME
+        type: SECRET
+
+domains:
+  - domain: leavethemold.com
+    type: PRIMARY
+  - domain: www.leavethemold.com
+    type: ALIAS

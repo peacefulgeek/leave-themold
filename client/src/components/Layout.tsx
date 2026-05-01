@@ -9,6 +9,8 @@ const NAV = [
   { href: "/articles/category/treatment", label: "Treatment" },
   { href: "/articles/category/environment", label: "Environment" },
   { href: "/articles/category/biomarkers", label: "Biomarkers" },
+  { href: "/assessments", label: "Assessments" },
+  { href: "/supplements", label: "Supplements & Herbs" },
   { href: "/recommended", label: "Recommended Tools" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
@@ -101,6 +103,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <h4 className="kicker mb-2">About</h4>
             <ul className="space-y-1">
               <li><Link href="/about">About the Author</Link></li>
+              <li><Link href="/assessments">CIRS Assessments</Link></li>
+              <li><Link href="/supplements">Supplements &amp; Herbs</Link></li>
               <li><Link href="/recommended">Recommended Tools</Link></li>
               <li><Link href="/privacy">Privacy &amp; Disclosures</Link></li>
               <li><Link href="/contact">Contact</Link></li>
