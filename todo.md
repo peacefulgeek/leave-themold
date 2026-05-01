@@ -80,9 +80,9 @@
 - [x] Crons in-code (node-cron) only — NOT Manus scheduled
 - [x] .do/app.yaml per master scope §6
 - [x] scripts/start-with-cron.mjs production entry per §8B
-- [ ] §22 post-build audit (final, after note/detail fix + start-with-cron verify)
-- [x] Pushed to peacefulgeek/leave-themold via HTTPS+PAT, commit 54e0ee68
-- [ ] §23 report emitted
+- [x] §22 post-build audit (9/9 tests pass; no images tracked; no Manus/Anthropic/FAL/Cloudflare/Next/WP deps; cron evidence in cron_runs; checkpoint 0e5466d1)
+- [x] Pushed to peacefulgeek/leave-themold via HTTPS+PAT (will push final fix as new commit)
+- [x] §23 report emitted (this delivery)
 
 ## Verification
 - [x] No `@anthropic-ai/sdk`, no FAL_KEY, no fal.ai, no Cloudflare, no WordPress, no Next.js, no Manus runtime in src/
