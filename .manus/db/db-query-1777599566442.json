@@ -1,0 +1,16 @@
+{
+  "query": "SELECT MIN(wordCount) as min_w, MAX(wordCount) as max_w, AVG(wordCount) as avg_w, COUNT(*) as n FROM articles WHERE status='published';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute SELECT MIN(wordCount) as min_w, MAX(wordCount) as max_w, AVG(wordCount) as avg_w, COUNT(*) as n FROM articles WHERE status='published';",
+  "rows": [
+    {
+      "min_w": "1639",
+      "max_w": "2167",
+      "avg_w": "1766.0333",
+      "n": "30"
+    }
+  ],
+  "messages": [],
+  "stdout": "min_w\tmax_w\tavg_w\tn\n1639\t2167\t1766.0333\t30\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}

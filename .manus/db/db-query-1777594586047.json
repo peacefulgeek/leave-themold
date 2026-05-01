@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `asins` (`id` int AUTO_INCREMENT NOT NULL, `asin` varchar(16) NOT NULL, `name` varchar(280) NOT NULL, `category` varchar(80) NOT NULL, `tags` json NOT NULL, `verified` boolean NOT NULL DEFAULT true, `lastCheckedAt` timestamp NULL, CONSTRAINT `asins_id` PRIMARY KEY(`id`), CONSTRAINT `asins_asin_unique` UNIQUE(`asin`)); CREATE TABLE `cron_runs` (`id` int AUTO_INCREMENT NOT NULL, `job` varchar(80) NOT NULL, `startedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `finishedAt` timestamp NULL, `ok` boolean NOT NULL DEFAULT false, `message` text, CONSTRAINT `cron_runs_id` PRIMARY KEY(`id`));",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute CREATE TABLE `asins` (`id` int AUTO_INCREMENT NOT NULL, `asin` varchar(16) NOT NULL, `name` varchar(280) NOT NULL, `category` varchar(80) NOT NULL, `tags` json NOT NULL, `verified` boolean NOT NULL DEFAULT true, `lastCheckedAt` timestamp NULL, CONSTRAINT `asins_id` PRIMARY KEY(`id`), CONSTRAINT `asins_asin_unique` UNIQUE(`asin`)); CREATE TABLE `cron_runs` (`id` int AUTO_INCREMENT NOT NULL, `job` varchar(80) NOT NULL, `startedAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, `finishedAt` timestamp NULL, `ok` boolean NOT NULL DEFAULT false, `message` text, CONSTRAINT `cron_runs_id` PRIMARY KEY(`id`));",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 225
+}

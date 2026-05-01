@@ -1,0 +1,30 @@
+{
+  "query": "SELECT slug, heroUrl FROM articles WHERE status='published' LIMIT 5;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute SELECT slug, heroUrl FROM articles WHERE status='published' LIMIT 5;",
+  "rows": [
+    {
+      "slug": "what-is-cirs",
+      "heroUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-08-Hgnq2RKxAsjA75NBSoL8m7.webp"
+    },
+    {
+      "slug": "early-signs-of-mold-illness",
+      "heroUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-14-85DcNAAynQWaa5biQTVVyD.webp"
+    },
+    {
+      "slug": "shoemaker-protocol-overview",
+      "heroUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-01-3tkSQZCbtg8qCEjSaESFAu.webp"
+    },
+    {
+      "slug": "vcs-test-explained",
+      "heroUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-13-agX7mKx34N8Nteu6yfTHa9.webp"
+    },
+    {
+      "slug": "mycotoxin-urine-test-guide",
+      "heroUrl": "https://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-03-hpcuY87DAQQJbFTRpc62s7.webp"
+    }
+  ],
+  "messages": [],
+  "stdout": "slug\theroUrl\nwhat-is-cirs\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-08-Hgnq2RKxAsjA75NBSoL8m7.webp\nearly-signs-of-mold-illness\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-14-85DcNAAynQWaa5biQTVVyD.webp\nshoemaker-protocol-overview\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-01-3tkSQZCbtg8qCEjSaESFAu.webp\nvcs-test-explained\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-13-agX7mKx34N8Nteu6yfTHa9.webp\nmycotoxin-urine-test-guide\thttps://d2xsxph8kpxj0f.cloudfront.net/310519663309220512/KSYP2suNBqxpqBwCQMxZpZ/lib-03-hpcuY87DAQQJbFTRpc62s7.webp\n",
+  "stderr": "",
+  "execution_time_ms": 142
+}

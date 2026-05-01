@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE `articles` (`id` int AUTO_INCREMENT NOT NULL, `slug` varchar(160) NOT NULL, `title` varchar(280) NOT NULL, `body` text NOT NULL, `tldr` text, `category` varchar(80) NOT NULL, `tags` json NOT NULL, `status` enum('queued','published') NOT NULL DEFAULT 'queued', `author` varchar(80) NOT NULL DEFAULT 'The Oracle Lover', `metaDescription` varchar(320), `heroUrl` varchar(500), `heroAlt` varchar(280), `asinsUsed` json NOT NULL, `internalLinksUsed` json NOT NULL, `externalLinksUsed` json NOT NULL, `wordCount` int NOT NULL DEFAULT 0, `readingTime` int NOT NULL DEFAULT 0, `queuedAt` datetime, `publishedAt` datetime, `lastModifiedAt` datetime, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, CONSTRAINT `articles_id` PRIMARY KEY(`id`), CONSTRAINT `articles_slug_unique` UNIQUE(`slug`));",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute CREATE TABLE `articles` (`id` int AUTO_INCREMENT NOT NULL, `slug` varchar(160) NOT NULL, `title` varchar(280) NOT NULL, `body` text NOT NULL, `tldr` text, `category` varchar(80) NOT NULL, `tags` json NOT NULL, `status` enum('queued','published') NOT NULL DEFAULT 'queued', `author` varchar(80) NOT NULL DEFAULT 'The Oracle Lover', `metaDescription` varchar(320), `heroUrl` varchar(500), `heroAlt` varchar(280), `asinsUsed` json NOT NULL, `internalLinksUsed` json NOT NULL, `externalLinksUsed` json NOT NULL, `wordCount` int NOT NULL DEFAULT 0, `readingTime` int NOT NULL DEFAULT 0, `queuedAt` datetime, `publishedAt` datetime, `lastModifiedAt` datetime, `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP, CONSTRAINT `articles_id` PRIMARY KEY(`id`), CONSTRAINT `articles_slug_unique` UNIQUE(`slug`));",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 189
+}

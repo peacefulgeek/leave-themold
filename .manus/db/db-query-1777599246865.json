@@ -1,0 +1,9 @@
+{
+  "query": "ALTER TABLE articles MODIFY tags JSON NULL, MODIFY asinsUsed JSON NULL, MODIFY internalLinksUsed JSON NULL, MODIFY externalLinksUsed JSON NULL;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute ALTER TABLE articles MODIFY tags JSON NULL, MODIFY asinsUsed JSON NULL, MODIFY internalLinksUsed JSON NULL, MODIFY externalLinksUsed JSON NULL;",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 191
+}

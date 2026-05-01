@@ -1,0 +1,160 @@
+{
+  "query": "SELECT slug, wordCount, DATE(publishedAt) as day FROM articles WHERE status='published' ORDER BY publishedAt DESC LIMIT 35;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute SELECT slug, wordCount, DATE(publishedAt) as day FROM articles WHERE status='published' ORDER BY publishedAt DESC LIMIT 35;",
+  "rows": [
+    {
+      "slug": "early-signs-of-mold-illness",
+      "wordCount": "1304",
+      "day": "2026-05-01"
+    },
+    {
+      "slug": "shoemaker-protocol-overview",
+      "wordCount": "1059",
+      "day": "2026-05-01"
+    },
+    {
+      "slug": "what-is-cirs",
+      "wordCount": "1534",
+      "day": "2026-05-01"
+    },
+    {
+      "slug": "mycotoxin-urine-test-guide",
+      "wordCount": "1021",
+      "day": "2026-04-30"
+    },
+    {
+      "slug": "vcs-test-explained",
+      "wordCount": "1006",
+      "day": "2026-04-30"
+    },
+    {
+      "slug": "ermi-vs-hertsmi-2",
+      "wordCount": "1115",
+      "day": "2026-04-29"
+    },
+    {
+      "slug": "binders-cholestyramine-welchol",
+      "wordCount": "1120",
+      "day": "2026-04-29"
+    },
+    {
+      "slug": "remediating-a-water-damaged-home",
+      "wordCount": "1117",
+      "day": "2026-04-28"
+    },
+    {
+      "slug": "air-purifier-buyers-guide-cirs",
+      "wordCount": "1127",
+      "day": "2026-04-28"
+    },
+    {
+      "slug": "msh-and-the-pituitary",
+      "wordCount": "1119",
+      "day": "2026-04-27"
+    },
+    {
+      "slug": "humidity-and-mold-growth",
+      "wordCount": "1137",
+      "day": "2026-04-27"
+    },
+    {
+      "slug": "mold-illness-vs-lyme",
+      "wordCount": "1127",
+      "day": "2026-04-27"
+    },
+    {
+      "slug": "leaky-gut-and-cirs",
+      "wordCount": "1114",
+      "day": "2026-04-26"
+    },
+    {
+      "slug": "tgf-beta-1-elevation",
+      "wordCount": "1143",
+      "day": "2026-04-26"
+    },
+    {
+      "slug": "c4a-explained",
+      "wordCount": "1121",
+      "day": "2026-04-25"
+    },
+    {
+      "slug": "vip-nasal-spray-protocol",
+      "wordCount": "1114",
+      "day": "2026-04-25"
+    },
+    {
+      "slug": "mars-genetic-testing",
+      "wordCount": "1122",
+      "day": "2026-04-24"
+    },
+    {
+      "slug": "diet-for-cirs-recovery",
+      "wordCount": "1126",
+      "day": "2026-04-24"
+    },
+    {
+      "slug": "glutathione-recovery",
+      "wordCount": "1117",
+      "day": "2026-04-23"
+    },
+    {
+      "slug": "low-amylose-diet-mold",
+      "wordCount": "1115",
+      "day": "2026-04-23"
+    },
+    {
+      "slug": "biofilm-and-mold-recovery",
+      "wordCount": "1110",
+      "day": "2026-04-23"
+    },
+    {
+      "slug": "mast-cell-activation-mold",
+      "wordCount": "1124",
+      "day": "2026-04-22"
+    },
+    {
+      "slug": "moving-out-of-a-moldy-home",
+      "wordCount": "1124",
+      "day": "2026-04-22"
+    },
+    {
+      "slug": "decontaminating-belongings",
+      "wordCount": "1128",
+      "day": "2026-04-21"
+    },
+    {
+      "slug": "mold-and-cognitive-fog",
+      "wordCount": "1122",
+      "day": "2026-04-21"
+    },
+    {
+      "slug": "supplements-stack-cirs",
+      "wordCount": "1133",
+      "day": "2026-04-20"
+    },
+    {
+      "slug": "sauna-therapy-mold",
+      "wordCount": "1128",
+      "day": "2026-04-20"
+    },
+    {
+      "slug": "cirs-recovery-timeline",
+      "wordCount": "1127",
+      "day": "2026-04-19"
+    },
+    {
+      "slug": "chronic-fatigue-and-mold",
+      "wordCount": "1123",
+      "day": "2026-04-19"
+    },
+    {
+      "slug": "indoor-air-quality-cirs",
+      "wordCount": "1114",
+      "day": "2026-04-18"
+    }
+  ],
+  "messages": [],
+  "stdout": "slug\twordCount\tday\nearly-signs-of-mold-illness\t1304\t2026-05-01\nshoemaker-protocol-overview\t1059\t2026-05-01\nwhat-is-cirs\t1534\t2026-05-01\nmycotoxin-urine-test-guide\t1021\t2026-04-30\nvcs-test-explained\t1006\t2026-04-30\nermi-vs-hertsmi-2\t1115\t2026-04-29\nbinders-cholestyramine-welchol\t1120\t2026-04-29\nremediating-a-water-damaged-home\t1117\t2026-04-28\nair-purifier-buyers-guide-cirs\t1127\t2026-04-28\nmsh-and-the-pituitary\t1119\t2026-04-27\nhumidity-and-mold-growth\t1137\t2026-04-27\nmold-illness-vs-lyme\t1127\t2026-04-27\nleaky-gut-and-cirs\t1114\t2026-04-26\ntgf-beta-1-elevation\t1143\t2026-04-26\nc4a-explained\t1121\t2026-04-25\nvip-nasal-spray-protocol\t1114\t2026-04-25\nmars-genetic-testing\t1122\t2026-04-24\ndiet-for-cirs-recovery\t1126\t2026-04-24\nglutathione-recovery\t1117\t2026-04-23\nlow-amylose-diet-mold\t1115\t2026-04-23\nbiofilm-and-mold-recovery\t1110\t2026-04-23\nmast-cell-activation-mold\t1124\t2026-04-22\nmoving-out-of-a-moldy-home\t1124\t2026-04-22\ndecontaminating-belongings\t1128\t2026-04-21\nmold-and-cognitive-fog\t1122\t2026-04-21\nsupplements-stack-cirs\t1133\t2026-04-20\nsauna-therapy-mold\t1128\t2026-04-20\ncirs-recovery-timeline\t1127\t2026-04-19\nchronic-fatigue-and-mold\t1123\t2026-04-19\nindoor-air-quality-cirs\t1114\t2026-04-18\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}

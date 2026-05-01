@@ -1,0 +1,17 @@
+{
+  "query": "SELECT COUNT(*) AS published, MIN(wordCount) AS min_w, MAX(wordCount) AS max_w, ROUND(AVG(wordCount)) AS avg_w, COUNT(DISTINCT DATE(publishedAt)) AS distinct_days FROM articles WHERE status='published';",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute SELECT COUNT(*) AS published, MIN(wordCount) AS min_w, MAX(wordCount) AS max_w, ROUND(AVG(wordCount)) AS avg_w, COUNT(DISTINCT DATE(publishedAt)) AS distinct_days FROM articles WHERE status='published';",
+  "rows": [
+    {
+      "published": "36",
+      "min_w": "1640",
+      "max_w": "2170",
+      "avg_w": "1764",
+      "distinct_days": "14"
+    }
+  ],
+  "messages": [],
+  "stdout": "published\tmin_w\tmax_w\tavg_w\tdistinct_days\n36\t1640\t2170\t1764\t14\n",
+  "stderr": "",
+  "execution_time_ms": 55
+}

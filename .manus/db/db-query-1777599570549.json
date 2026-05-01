@@ -1,0 +1,66 @@
+{
+  "query": "SELECT DATE(publishedAt) as day, COUNT(*) as n FROM articles WHERE status='published' GROUP BY DATE(publishedAt) ORDER BY day;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute SELECT DATE(publishedAt) as day, COUNT(*) as n FROM articles WHERE status='published' GROUP BY DATE(publishedAt) ORDER BY day;",
+  "rows": [
+    {
+      "day": "2026-04-18",
+      "n": "1"
+    },
+    {
+      "day": "2026-04-19",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-20",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-21",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-22",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-23",
+      "n": "3"
+    },
+    {
+      "day": "2026-04-24",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-25",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-26",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-27",
+      "n": "3"
+    },
+    {
+      "day": "2026-04-28",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-29",
+      "n": "2"
+    },
+    {
+      "day": "2026-04-30",
+      "n": "2"
+    },
+    {
+      "day": "2026-05-01",
+      "n": "3"
+    }
+  ],
+  "messages": [],
+  "stdout": "day\tn\n2026-04-18\t1\n2026-04-19\t2\n2026-04-20\t2\n2026-04-21\t2\n2026-04-22\t2\n2026-04-23\t3\n2026-04-24\t2\n2026-04-25\t2\n2026-04-26\t2\n2026-04-27\t3\n2026-04-28\t2\n2026-04-29\t2\n2026-04-30\t2\n2026-05-01\t3\n",
+  "stderr": "",
+  "execution_time_ms": 61
+}

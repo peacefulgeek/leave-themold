@@ -1,0 +1,80 @@
+{
+  "query": "SELECT job, ok, message, startedAt, finishedAt FROM cron_runs ORDER BY startedAt DESC LIMIT 10;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute SELECT job, ok, message, startedAt, finishedAt FROM cron_runs ORDER BY startedAt DESC LIMIT 10;",
+  "rows": [
+    {
+      "job": "refresh_monthly",
+      "ok": "1",
+      "message": "refreshed 5",
+      "startedAt": "2026-05-01 01:52:47",
+      "finishedAt": "2026-05-01 01:52:47"
+    },
+    {
+      "job": "publisher",
+      "ok": "1",
+      "message": "published cirs-and-thyroid (1759 words)",
+      "startedAt": "2026-05-01 01:52:47",
+      "finishedAt": "2026-05-01 01:52:47"
+    },
+    {
+      "job": "asin_health",
+      "ok": "1",
+      "message": "ok=9/18 failures=B07VVK39F7=503,B0863TXGM3=503,B086D7ZJZS=503,B07RJTVC7Q=503,B07TVH2KYH=503,0996768505=503,B07GNVZKY2=503,B07BL31XB2=503,B0044R8YQM=503",
+      "startedAt": "2026-05-01 01:52:47",
+      "finishedAt": "2026-05-01 01:52:48"
+    },
+    {
+      "job": "refresh_quarterly",
+      "ok": "1",
+      "message": "refreshed 25",
+      "startedAt": "2026-05-01 01:52:47",
+      "finishedAt": "2026-05-01 01:52:47"
+    },
+    {
+      "job": "product_spotlight",
+      "ok": "1",
+      "message": "delegated_to_publisher; sample=AustinAir HealthMate HEPA Air Purifier -> https://www.amazon.com/dp/B07BN1ZRBJ?tag=spankyspinola-20; Levoit Core 300 True HEPA Air Purifier -> https://www.amazon.com/dp/B07VVK39F7?tag=spankyspinola-20; Coway Airmega AP-1512HH HEPA Purifier -> https://www.amazon.com/dp/B0863TXGM3?tag=spankyspinola-20",
+      "startedAt": "2026-05-01 01:52:46",
+      "finishedAt": "2026-05-01 01:52:47"
+    },
+    {
+      "job": "publisher",
+      "ok": "1",
+      "message": "published mold-during-pregnancy (1738 words)",
+      "startedAt": "2026-05-01 01:52:46",
+      "finishedAt": "2026-05-01 01:52:46"
+    },
+    {
+      "job": "publisher",
+      "ok": "1",
+      "message": "published kids-mold-symptoms (1756 words)",
+      "startedAt": "2026-05-01 01:52:46",
+      "finishedAt": "2026-05-01 01:52:46"
+    },
+    {
+      "job": "publisher",
+      "ok": "0",
+      "message": "NULL",
+      "startedAt": "2026-05-01 01:52:15",
+      "finishedAt": "NULL"
+    },
+    {
+      "job": "refresh_monthly",
+      "ok": "0",
+      "message": "NULL",
+      "startedAt": "2026-05-01 01:52:15",
+      "finishedAt": "NULL"
+    },
+    {
+      "job": "publisher",
+      "ok": "0",
+      "message": "NULL",
+      "startedAt": "2026-05-01 01:52:15",
+      "finishedAt": "NULL"
+    }
+  ],
+  "messages": [],
+  "stdout": "job\tok\tmessage\tstartedAt\tfinishedAt\nrefresh_monthly\t1\trefreshed 5\t2026-05-01 01:52:47\t2026-05-01 01:52:47\npublisher\t1\tpublished cirs-and-thyroid (1759 words)\t2026-05-01 01:52:47\t2026-05-01 01:52:47\nasin_health\t1\tok=9/18 failures=B07VVK39F7=503,B0863TXGM3=503,B086D7ZJZS=503,B07RJTVC7Q=503,B07TVH2KYH=503,0996768505=503,B07GNVZKY2=503,B07BL31XB2=503,B0044R8YQM=503\t2026-05-01 01:52:47\t2026-05-01 01:52:48\nrefresh_quarterly\t1\trefreshed 25\t2026-05-01 01:52:47\t2026-05-01 01:52:47\nproduct_spotlight\t1\tdelegated_to_publisher; sample=AustinAir HealthMate HEPA Air Purifier -> https://www.amazon.com/dp/B07BN1ZRBJ?tag=spankyspinola-20; Levoit Core 300 True HEPA Air Purifier -> https://www.amazon.com/dp/B07VVK39F7?tag=spankyspinola-20; Coway Airmega AP-1512HH HEPA Purifier -> https://www.amazon.com/dp/B0863TXGM3?tag=spankyspinola-20\t2026-05-01 01:52:46\t2026-05-01 01:52:47\npublisher\t1\tpublished mold-during-pregnancy (1738 words)\t2026-05-01 01:52:46\t2026-05-01 01:52:46\npublisher\t1\tpublished kids-mold-symptoms (1756 words)\t2026-05-01 01:52:46\t2026-05-01 01:52:46\npublisher\t0\tNULL\t2026-05-01 01:52:15\tNULL\nrefresh_monthly\t0\tNULL\t2026-05-01 01:52:15\tNULL\npublisher\t0\tNULL\t2026-05-01 01:52:15\tNULL\n",
+  "stderr": "",
+  "execution_time_ms": 56
+}

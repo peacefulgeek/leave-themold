@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) AS cron_runs FROM cron_runs;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2tKWhLLrm4qtwFR.5867b2d12284 --database KSYP2suNBqxpqBwCQMxZpZ --execute SELECT COUNT(*) AS cron_runs FROM cron_runs;",
+  "rows": [
+    {
+      "cron_runs": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "cron_runs\n0\n",
+  "stderr": "",
+  "execution_time_ms": 52
+}
