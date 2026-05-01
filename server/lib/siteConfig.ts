@@ -16,11 +16,12 @@ export const SITE = {
       "researcher and patient advocate, eight years inside the CIRS protocol",
   },
   bunny: {
-    // Per master scope §9: hardcoded, not env vars.
-    // Replace these three when the Bunny zone is provisioned.
-    storageZone: "leave-the-mold",
-    apiKey: "REPLACE-WITH-BUNNY-STORAGE-PASSWORD",
-    pullZone: "https://leave-the-mold.b-cdn.net",
+    // Per master scope §9: pull-zone + storage zone are hardcoded.
+    // The write-key is the only secret — read from BUNNY_KEY env at runtime
+    // so it is never committed to the public repo.
+    storageZone: "leave-mold",
+    apiKey: process.env.BUNNY_KEY || "",
+    pullZone: "https://leave-mold.b-cdn.net",
     storageHost: "https://ny.storage.bunnycdn.com",
   },
   amazonTag: "spankyspinola-20",

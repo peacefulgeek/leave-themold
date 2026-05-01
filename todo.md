@@ -92,3 +92,15 @@
 - [ ] Run §22 post-build audit; capture every check status
 - [ ] Push to peacefulgeek/leave-themold via SSH, capture commit SHA
 - [ ] Emit §23 report block
+
+
+## Bunny CDN Live Migration (post-credentials)
+
+Storage zone: `leave-mold` @ `https://ny.storage.bunnycdn.com/leave-mold`
+Pull zone: `https://leave-mold.b-cdn.net`
+
+- [ ] Re-encode 17 source images to compressed WebP (q=82, max width 1600px)
+- [ ] Upload all WebPs to Bunny via authenticated PUT
+- [ ] Update imageLibrary.ts to use Bunny pull-zone (drop dev-storage fallback)
+- [ ] Repoint all 538 DB heroUrls to Bunny
+- [ ] Verify preview, run tests, checkpoint, push commit
