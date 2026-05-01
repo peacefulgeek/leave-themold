@@ -98,3 +98,6 @@
 - [ ] Point leavethemold.com DNS apex + www → DO App
 - [ ] Point cdn.leavethemold.com → leave-mold.b-cdn.net (CNAME, optional vanity CNAME on Bunny)
 - [ ] Submit sitemap.xml in Google Search Console
+
+## Bug fixes (post-launch)
+- [x] Desktop browser nav: horizontal masthead nav (Articles, Assessments, Supplements, Recommended, About, Contact); hamburger only on mobile (md breakpoint)
